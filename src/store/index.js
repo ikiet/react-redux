@@ -8,8 +8,9 @@ const store = createStore(
     action,
   ) => {
     if (action.type === "increment") {
+      const amount = action.amount ?? 1;
       return {
-        counter: state.counter + 1,
+        counter: state.counter + amount,
       };
     }
     if (action.type === "decrement") {
